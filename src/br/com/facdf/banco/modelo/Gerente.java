@@ -14,8 +14,10 @@ public class Gerente extends Funcionario {
         }
     }
 
+
+
     public boolean autenticar(String senha) {
-        if(this.senha.equalsIgnoreCase(senha)) {
+        if (this.senha.equalsIgnoreCase(senha)) {
             System.out.println("atenticado!!");
             return true;
         } else {
@@ -23,6 +25,8 @@ public class Gerente extends Funcionario {
             return false;
         }
     }
+
+
 
     @Override
     public String toString() {
