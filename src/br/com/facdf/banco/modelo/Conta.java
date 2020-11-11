@@ -2,11 +2,14 @@ package br.com.facdf.banco.modelo;
 
 public class Conta {
 
-
     private double saldo;
     private String codigoConta;
     private String agencia;
     private String codigoSeguranca;
+
+    public Conta() {
+
+    }
 
     public Conta(String codigoSeguranca) {
         this.codigoSeguranca = codigoSeguranca;

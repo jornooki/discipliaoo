@@ -1,8 +1,9 @@
 package br.com.facdf.banco.dao;
 
 
-public class ContaDao extends BaseDao {
+import br.com.facdf.banco.modelo.Conta;
 
+public class ContaDao extends BaseDao {
 
 
 }

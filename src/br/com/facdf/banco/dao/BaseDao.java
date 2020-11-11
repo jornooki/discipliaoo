@@ -7,7 +7,9 @@ import java.util.List;
 public class BaseDao {
 
     public void salvar(Object object) {
-        System.out.println("salvando" + object.toString());
+        if (object != null) {
+            System.out.println("Salvando" + object.toString());
+        }
     }
 
     public void deletar(Object conta) {

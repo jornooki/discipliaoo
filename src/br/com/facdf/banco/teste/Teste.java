@@ -24,9 +24,11 @@ public class Teste {
         Funcionario funcionario = new Funcionario();
         funcionario.setNome("Joao");
         funcionario.setRg("123456");
-        funcionario.setSalario(1000.0);
+       // funcionario.setSalario(-5.0);
 
-        System.out.println(funcionario.getBonificacao());
+        System.out.println(funcionario.getSalario());
+
+       // System.out.println(funcionario.getBonificacao());
 
         Gerente segundoGerente = new Gerente();
         segundoGerente.setNome("Marcos Tércio");
@@ -34,44 +36,35 @@ public class Teste {
         segundoGerente.setSalario(2000.0);
 
         segundoGerente.autenticar("123456");
-        System.out.println(segundoGerente.getBonificacao());
+      //  System.out.println(segundoGerente.getBonificacao());
 
         Conta conta = new Conta("789");
         conta.setAgencia("agencia xpto");
         conta.setCodigoConta("10500");
         conta.depositar(100);
 
-        System.out.println(conta.getCodigoSeguranca());
+      //  System.out.println(conta.getCodigoSeguranca());
 
         ContaDao dao = new ContaDao();
-        dao.salvar(conta);
+       // dao.salvar(conta);
+
 
         GerenteDao gerenteDao = new GerenteDao();
         segundoGerente.setSenha("1234567");
 
-        gerenteDao.salvar(segundoGerente);
+        System.out.println(segundoGerente.getBonificacao());
 
 
 
         EnderecoDao enderecoDao = new EnderecoDao();
-        enderecoDao.salvar(endereco);
+       // enderecoDao.salvar(endereco);
 
         EmpresaDao empresaDao = new EmpresaDao();
         Empresa facdf = new Empresa("123456789");
 
-        empresaDao.salvar(facdf);
 
-
-        /*
-        *
-        * Classe endereço com 3 atributos
-        *
-        * cep String
-        * logradouro String
-        * numero long
-        *
-        *
-        * */
+        // Criar o método  autenticar para a classe funcionário apenas com login
+        // criar o método autenticar para gerente com login e senha
 
 
     }
