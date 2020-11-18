@@ -1,70 +1,50 @@
 package br.com.facdf.banco.teste;
 
 
-import br.com.facdf.banco.dao.ContaDao;
-import br.com.facdf.banco.dao.EmpresaDao;
-import br.com.facdf.banco.dao.EnderecoDao;
-import br.com.facdf.banco.dao.GerenteDao;
-import br.com.facdf.banco.modelo.*;
+import br.com.facdf.banco.modelo.AnalistaDeRequisitos;
+import br.com.facdf.banco.modelo.Funcionario;
+import br.com.facdf.banco.modelo.Gerente;
+import br.com.facdf.banco.modelo.Programador;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Teste {
 
-
-
-    // nome do arquivo javac Conta.java
-    // nome da classe java Conta
-
-
     public static void main (String args []) {
 
-        Pessoa pessoa = new Pessoa();
-        Endereco endereco = new Endereco();
-        pessoa.setEndereco(endereco);
+        ArrayList<Funcionario> listaFuncionarios = new ArrayList<>();
 
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("Joao");
-        funcionario.setRg("123456");
-       // funcionario.setSalario(-5.0);
+        Funcionario gerente = new Gerente();
+        gerente.setNome("Marcos Tércio");
+        listaFuncionarios.add(gerente);
 
-        System.out.println(funcionario.getSalario());
+        Funcionario programador = new Programador();
+        programador.setNome("Luiz");
+        listaFuncionarios.add(programador);
 
-       // System.out.println(funcionario.getBonificacao());
-
-        Gerente segundoGerente = new Gerente();
-        segundoGerente.setNome("Marcos Tércio");
-        segundoGerente.setSenha("123456");
-        segundoGerente.setSalario(2000.0);
-
-        segundoGerente.autenticar("123456");
-      //  System.out.println(segundoGerente.getBonificacao());
-
-        Conta conta = new Conta("789");
-        conta.setAgencia("agencia xpto");
-        conta.setCodigoConta("10500");
-        conta.depositar(100);
-
-      //  System.out.println(conta.getCodigoSeguranca());
-
-        ContaDao dao = new ContaDao();
-       // dao.salvar(conta);
-
-
-        GerenteDao gerenteDao = new GerenteDao();
-        segundoGerente.setSenha("1234567");
-
-        System.out.println(segundoGerente.getBonificacao());
+        Funcionario analista = new AnalistaDeRequisitos();
+        analista.setNome("Nathalia");
+        listaFuncionarios.add(analista);
 
 
 
-        EnderecoDao enderecoDao = new EnderecoDao();
-       // enderecoDao.salvar(endereco);
+        for (Funcionario f : listaFuncionarios) {
 
-        EmpresaDao empresaDao = new EmpresaDao();
-        Empresa facdf = new Empresa("123456789");
+            if(f.getNome().equalsIgnoreCase("nathalia")) {
+                System.out.println(f.getNome());
+            }
+        }
 
 
-        // Criar o método  autenticar para a classe funcionário apenas com login
-        // criar o método autenticar para gerente com login e senha
+
+        //Dado que o usuario tenha acesso a tela de lista de clientes
+        // e liste todas as pessoas do sistema
+        // e crie a classe cliente
+
+
+
 
 
     }

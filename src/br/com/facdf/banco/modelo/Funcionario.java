@@ -1,24 +1,30 @@
 package br.com.facdf.banco.modelo;
 
-public class Funcionario extends Pessoa {
+public abstract class Funcionario extends Pessoa {
 
     protected double salario;
+    protected long codigoFuncionario;
 
     public Double getSalario() {
         return salario;
     }
 
-    public void setSalario(Double salario) {
-        if (salario > 0) {
+    public final void setSalario(Double salario) {
+        if (salario > 1050) {
             this.salario = salario;
         } else {
-            System.out.println("Salário deve ser positivo ");
+            System.out.println("Salário deve ser maior que 1045 ");
         }
     }
 
-    public double getBonificacao() {
+    public abstract double getBonificacao();
 
-        return this.salario += this.salario * 0.1;
+    public long getCodigoFuncionario() {
+        return codigoFuncionario;
+    }
+
+    public void setCodigoFuncionario(long codigoFuncionario) {
+        this.codigoFuncionario = codigoFuncionario;
     }
 
     @Override
@@ -28,4 +34,5 @@ public class Funcionario extends Pessoa {
     }
 
 
+    public abstract void entregarDocumentos();
 }

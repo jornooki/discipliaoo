@@ -1,6 +1,6 @@
 package br.com.facdf.banco.modelo;
 
-public class Pessoa {
+public abstract class Pessoa {
 
 	public Pessoa(String rg, String nome) {
 		this.rg = rg;
@@ -47,6 +47,8 @@ public class Pessoa {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+
+	public abstract void entregarDocumentos();
 
 	public String chamarProximo() {
 		return "proximo por favor";

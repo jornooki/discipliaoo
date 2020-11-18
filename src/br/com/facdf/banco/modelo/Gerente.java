@@ -37,4 +37,9 @@ public class Gerente extends Funcionario {
     public String toString() {
         return " Gerente " + this.getSenha();
     }
+
+    @Override
+    public void entregarDocumentos() {
+
+    }
 }
