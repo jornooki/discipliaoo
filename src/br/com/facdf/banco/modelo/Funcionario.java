@@ -1,6 +1,6 @@
 package br.com.facdf.banco.modelo;
 
-public abstract class Funcionario extends Pessoa {
+public  abstract class Funcionario extends Pessoa {
 
     protected double salario;
     protected long codigoFuncionario;
@@ -33,6 +33,10 @@ public abstract class Funcionario extends Pessoa {
 
     }
 
+    @Override
+    public  void realizarCadastro(){
+        System.out.println("realizar cadastro");
+    }
 
     public abstract void entregarDocumentos();
 }

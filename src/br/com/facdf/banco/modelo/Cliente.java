@@ -1,0 +1,35 @@
+package br.com.facdf.banco.modelo;
+
+public class Cliente extends Pessoa {
+
+    private long codigoCliente;
+
+    public boolean ehEspecial;
+
+    public long getCodigoCliente() {
+        return codigoCliente;
+    }
+
+    public void setCodigoCliente(long codigoCliente) {
+        this.codigoCliente = codigoCliente;
+    }
+
+
+    @Override
+    public void entregarDocumentos() {
+        System.out.println("CPF na nota");
+    }
+
+    @Override
+    public void realizarCadastro() {
+
+    }
+
+
+    public void realizarCadastro(String msg) {
+
+    }
+
+    public void realizarCadastro(int msg) {
+    }
+}

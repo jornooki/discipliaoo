@@ -1,43 +1,46 @@
 package br.com.facdf.banco.teste;
 
 
-import br.com.facdf.banco.modelo.AnalistaDeRequisitos;
-import br.com.facdf.banco.modelo.Funcionario;
-import br.com.facdf.banco.modelo.Gerente;
-import br.com.facdf.banco.modelo.Programador;
+import br.com.facdf.banco.modelo.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Teste {
 
     public static void main (String args []) {
 
-        ArrayList<Funcionario> listaFuncionarios = new ArrayList<>();
 
-        Funcionario gerente = new Gerente();
+
+        List<Pessoa> listaPessoas = new ArrayList<>();
+
+        Pessoa cliente = new Cliente();
+        cliente.setNome("Jose");
+        listaPessoas.add(cliente);
+
+
+        Pessoa gerente = new Gerente();
         gerente.setNome("Marcos Tércio");
-        listaFuncionarios.add(gerente);
+        listaPessoas.add(gerente);
 
-        Funcionario programador = new Programador();
+        Pessoa programador = new Programador();
         programador.setNome("Luiz");
-        listaFuncionarios.add(programador);
+        listaPessoas.add(programador);
 
-        Funcionario analista = new AnalistaDeRequisitos();
+        Pessoa analista = new AnalistaDeRequisitos();
         analista.setNome("Nathalia");
-        listaFuncionarios.add(analista);
+        listaPessoas.add(analista);
 
-
-
-        for (Funcionario f : listaFuncionarios) {
-
-            if(f.getNome().equalsIgnoreCase("nathalia")) {
+        if(listaPessoas.isEmpty()) {
+            for (Pessoa f : listaPessoas) {
                 System.out.println(f.getNome());
             }
         }
 
 
+        Programador programador1 = new Programador();
+        programador1.realizarCadastro();
+        programador1.setSalario(1000D);
 
         //Dado que o usuario tenha acesso a tela de lista de clientes
         // e liste todas as pessoas do sistema
