@@ -1,6 +1,6 @@
 package br.com.facdf.banco.modelo;
 
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionario implements Autenticavel, RecebeBeneficios {
 
     private String senha;
 
@@ -41,5 +41,21 @@ public class Gerente extends Funcionario {
     @Override
     public void entregarDocumentos() {
 
+    }
+
+    @Override
+    public boolean autentica(String senha) {
+        if (this.senha.equalsIgnoreCase(senha)) {
+            System.out.println("atenticado!!");
+            return true;
+        } else {
+            System.out.println("senha errada");
+            return false;
+        }
+    }
+
+    @Override
+    public void trocarSenha(String senha) {
+       this.senha = senha;
     }
 }

@@ -15,17 +15,6 @@ public class Cliente extends Pessoa {
     }
 
 
-    @Override
-    public void entregarDocumentos() {
-        System.out.println("CPF na nota");
-    }
-
-    @Override
-    public void realizarCadastro() {
-
-    }
-
-
     public void realizarCadastro(String msg) {
 
     }

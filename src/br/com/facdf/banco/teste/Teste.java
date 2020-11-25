@@ -1,6 +1,5 @@
 package br.com.facdf.banco.teste;
 
-
 import br.com.facdf.banco.modelo.*;
 
 import java.util.ArrayList;
@@ -10,45 +9,55 @@ public class Teste {
 
     public static void main (String args []) {
 
-
+//        git branch nomeDeVoces
+//        git checkout nomeDeVoces
+//        git push origin nomeDeVoces
 
         List<Pessoa> listaPessoas = new ArrayList<>();
+
+        Endereco endereco = new Endereco();
+        endereco.setLogradouro("rua 45");
 
         Pessoa cliente = new Cliente();
         cliente.setNome("Jose");
         listaPessoas.add(cliente);
+        cliente.setEndereco(endereco);
+
+        Pessoa cliente2 = new Cliente();
+        cliente.setNome("Jose");
+        cliente.setEndereco(endereco);
+
+        Dependente dependente = new Dependente();
+        dependente.setNome("joao");
+        dependente.setCodigoDependente(15464);
+        dependente.setCliente((Cliente)cliente);
+
+        Dependente dependente2 = new Dependente();
+        dependente2.setNome("Maria");
+        dependente2.setCodigoDependente(15464);
+        dependente2.setCliente((Cliente)cliente);
+
+        imprimirInformacoesDependente(dependente);
+
+        imprimirInformacoesDependente(dependente2);
 
 
-        Pessoa gerente = new Gerente();
-        gerente.setNome("Marcos Tércio");
-        listaPessoas.add(gerente);
 
-        Pessoa programador = new Programador();
-        programador.setNome("Luiz");
-        listaPessoas.add(programador);
-
-        Pessoa analista = new AnalistaDeRequisitos();
-        analista.setNome("Nathalia");
-        listaPessoas.add(analista);
-
-        if(listaPessoas.isEmpty()) {
-            for (Pessoa f : listaPessoas) {
-                System.out.println(f.getNome());
-            }
-        }
-
-
-        Programador programador1 = new Programador();
-        programador1.realizarCadastro();
-        programador1.setSalario(1000D);
-
-        //Dado que o usuario tenha acesso a tela de lista de clientes
-        // e liste todas as pessoas do sistema
-        // e crie a classe cliente
 
 
 
 
 
     }
+
+    private static void imprimirInformacoesDependente(Dependente qualquerDependente) {
+        System.out.println(qualquerDependente.getNome());
+        System.out.println(qualquerDependente.getCliente().getNome());
+        System.out.println(qualquerDependente.getCliente().getEndereco().getLogradouro());
+    }
 }
+
+
+
+
+

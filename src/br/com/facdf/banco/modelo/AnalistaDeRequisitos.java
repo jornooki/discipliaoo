@@ -1,6 +1,6 @@
 package br.com.facdf.banco.modelo;
 
-public class AnalistaDeRequisitos extends Funcionario {
+public class AnalistaDeRequisitos extends Funcionario implements Autenticavel{
 
     @Override
     public double getBonificacao() {
@@ -14,5 +14,15 @@ public class AnalistaDeRequisitos extends Funcionario {
 
     public void levantarRequisitos() {
         System.out.println("levantando requisitos");
+    }
+
+    @Override
+    public boolean autentica(String senha) {
+        return false;
+    }
+
+    @Override
+    public void trocarSenha(String senha) {
+
     }
 }

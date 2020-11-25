@@ -48,12 +48,6 @@ public abstract class Pessoa {
 		this.endereco = endereco;
 	}
 
-	public abstract void entregarDocumentos();
 
-	public abstract void realizarCadastro();
-
-	public String chamarProximo() {
-		return "proximo por favor";
-	}
 }
 
