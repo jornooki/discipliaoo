@@ -14,33 +14,18 @@ public class Gerente extends Funcionario implements Autenticavel, RecebeBenefici
         }
     }
 
-
+    @Override
     public double getBonificacao() {
 
         return super.salario += super.salario * 0.2;
     }
 
-
-    public boolean autenticar(String senha) {
-        if (this.senha.equalsIgnoreCase(senha)) {
-            System.out.println("atenticado!!");
-            return true;
+    public final void pagarSalario(Double salario) {
+        if (salario > 5000) {
+            this.salario = salario;
         } else {
-            System.out.println("senha errada");
-            return false;
+            System.out.println("Salário deve ser maior que 5000 ");
         }
-    }
-
-
-
-    @Override
-    public String toString() {
-        return " Gerente " + this.getSenha();
-    }
-
-    @Override
-    public void entregarDocumentos() {
-
     }
 
     @Override
@@ -52,6 +37,17 @@ public class Gerente extends Funcionario implements Autenticavel, RecebeBenefici
             System.out.println("senha errada");
             return false;
         }
+    }
+
+
+    @Override
+    public String toString() {
+        return " Gerente " + this.getSenha();
+    }
+
+    @Override
+    public void entregarDocumentos() {
+
     }
 
     @Override

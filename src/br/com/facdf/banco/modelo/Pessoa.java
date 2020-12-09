@@ -1,5 +1,7 @@
 package br.com.facdf.banco.modelo;
 
+import java.util.Date;
+
 public abstract class Pessoa {
 
 	public Pessoa(String rg, String nome) {
@@ -11,6 +13,7 @@ public abstract class Pessoa {
 
 	}
 
+	private Date dataNascimento;
 	private int idade;
 	private String rg;	
 	private String nome;
@@ -38,6 +41,14 @@ public abstract class Pessoa {
 
 	public void setNome(String nomeDigitado) {
 		this.nome = nomeDigitado;
+	}
+
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 	public Endereco getEndereco() {

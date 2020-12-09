@@ -1,6 +1,6 @@
 package br.com.facdf.banco.modelo;
 
-public abstract class Funcionario extends Pessoa  {
+public abstract class Funcionario extends Pessoa {
 
     protected double salario;
     protected long codigoFuncionario;
@@ -9,7 +9,7 @@ public abstract class Funcionario extends Pessoa  {
         return salario;
     }
 
-    public final void setSalario(Double salario) {
+    public void pagarSalario(Double salario) {
         if (salario > 1050) {
             this.salario = salario;
         } else {

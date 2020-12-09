@@ -1,6 +1,6 @@
 package br.com.facdf.banco.modelo;
 
-public class Conta {
+public class Conta  {
 
     private double saldo;
     private String codigoConta;
@@ -12,6 +12,17 @@ public class Conta {
     }
 
     public Conta(String codigoSeguranca) {
+        this.codigoSeguranca = codigoSeguranca;
+    }
+
+    public Conta(String codigoSeguranca, String codigoConta) {
+        this.codigoSeguranca = codigoSeguranca;
+    }
+
+    public Conta(double saldo, String codigoConta, String agencia, String codigoSeguranca) {
+        this.saldo = saldo;
+        this.codigoConta = codigoConta;
+        this.agencia = agencia;
         this.codigoSeguranca = codigoSeguranca;
     }
 
