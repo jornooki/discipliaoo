@@ -69,15 +69,4 @@ public class Conta  {
     }
 
 
-    /* kennedy 1 ponto
-     *
-     * Classe endereço com 3 atributos
-     *
-     * cep String
-     * logradouro String
-     * numero long
-     *
-     *
-     * */
-
 }

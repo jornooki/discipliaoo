@@ -15,7 +15,7 @@ public class Programador extends Funcionario implements Autenticavel {
 
     public void programar(){
 
-        System.out.println("Enviar documentos por e-mail");
+        System.out.println("Enviar por email");
     }
 
     public void update(){

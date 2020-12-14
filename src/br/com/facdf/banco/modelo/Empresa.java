@@ -10,7 +10,7 @@ public class Empresa {
 
     @Override
     public String toString() {
-        return " Empresa " + cnpj;
+        return " Empresa: " + cnpj;
     }
 }
 

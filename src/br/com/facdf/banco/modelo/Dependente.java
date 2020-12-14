@@ -22,6 +22,6 @@ public class Dependente extends Pessoa {
     }
 
     public void solicitarServicoDependente() {
-        System.out.println("Algo que só o dependente pode fazer");
+        System.out.println("Solicitação de dependente");
     }
 }

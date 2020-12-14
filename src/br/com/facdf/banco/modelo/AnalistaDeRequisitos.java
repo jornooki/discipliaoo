@@ -13,7 +13,9 @@ public class AnalistaDeRequisitos extends Funcionario implements Autenticavel{
     }
 
     public void levantarRequisitos() {
-        System.out.println("levantando requisitos");
+
+        System.out.println("----------");
+        System.out.println("Levantando os requisitos");
     }
 
     @Override
