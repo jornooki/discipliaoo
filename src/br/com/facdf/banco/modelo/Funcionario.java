@@ -13,7 +13,7 @@ public abstract class Funcionario extends Pessoa {
         if (salario > 1050) {
             this.salario = salario;
         } else {
-            System.out.println("Sal√°rio deve ser maior que 1045 ");
+            System.out.println("O sal·rio deve ser superior a 1.045! ");
         }
     }
 
