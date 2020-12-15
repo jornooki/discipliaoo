@@ -15,7 +15,7 @@ public abstract class Pessoa {
 
 	private Date dataNascimento;
 	private int idade;
-	private String rg;	
+	private String rg;
 	private String nome;
 	private Endereco endereco;
 
@@ -59,6 +59,4 @@ public abstract class Pessoa {
 		this.endereco = endereco;
 	}
 
-
 }
-

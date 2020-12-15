@@ -2,9 +2,9 @@ package br.com.facdf.banco.modelo;
 
 public class ContaPessoaFisica extends Conta {
 
-    private Pessoa pessoa;
+	private Pessoa pessoa;
 
-    public ContaPessoaFisica(String codigoSeguranca) {
-        super(codigoSeguranca);
-    }
+	public ContaPessoaFisica(String codigoSeguranca) {
+		super(codigoSeguranca);
+	}
 }

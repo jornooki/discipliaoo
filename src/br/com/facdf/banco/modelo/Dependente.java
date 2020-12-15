@@ -2,26 +2,26 @@ package br.com.facdf.banco.modelo;
 
 public class Dependente extends Pessoa {
 
-    private int codigoDependente;
-    private Cliente cliente;
+	private int codigoDependente;
+	private Cliente cliente;
 
-    public Cliente getCliente() {
-        return cliente;
-    }
+	public Cliente getCliente() {
+		return cliente;
+	}
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 
-    public int getCodigoDependente() {
-        return codigoDependente;
-    }
+	public int getCodigoDependente() {
+		return codigoDependente;
+	}
 
-    public void setCodigoDependente(int codigoDependente) {
-        this.codigoDependente = codigoDependente;
-    }
+	public void setCodigoDependente(int codigoDependente) {
+		this.codigoDependente = codigoDependente;
+	}
 
-    public void solicitarServicoDependente() {
-        System.out.println("Algo que sÃ³ o dependente pode fazer");
-    }
+	public void solicitarServicoDependente() {
+		System.out.println("Serviço que o cliente tem disponibilidade para solicitar: ");
+	}
 }
